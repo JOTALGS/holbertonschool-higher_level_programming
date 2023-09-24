@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for i in range(ord('a'), ord('z')+1):  
-    print(chr(i), end='')
+for num in range(97, 123):
+    print("{0}".format(chr(num)), end="")
