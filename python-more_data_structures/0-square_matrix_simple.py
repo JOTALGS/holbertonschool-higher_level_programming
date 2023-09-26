@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-    square_matrix_simple(matrix=[]):
+square_matrix_simple(matrix=[]):
     nm = []
     for vec in matrix:
         sqr_vec = []
