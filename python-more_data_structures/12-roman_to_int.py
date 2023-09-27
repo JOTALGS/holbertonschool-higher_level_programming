@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     if not roman_string:
-        return None
+        return 0
 
     if not isinstance(roman_string, str):
-        return None
+        return 0
 
     roman_num = {
         'I': 1, 'V': 5, 'X': 10, 'L': 50,
