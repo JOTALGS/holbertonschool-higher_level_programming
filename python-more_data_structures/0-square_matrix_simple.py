@@ -6,4 +6,4 @@ def square_matrix_simple(matrix=[]):
         for i in vec:
             sqr_vec.append(i**2)
         nm.append(sqr_vec)
-    return(nm)
+    return (nm)
