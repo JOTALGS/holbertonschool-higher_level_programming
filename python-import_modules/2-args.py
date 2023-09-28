@@ -2,7 +2,6 @@
 import sys
 def main():
     ln = len(sys.argv) - 1
-    print(ln)
     if ln == 0:
         print("{} arguments:".fotmat(ln))
     elif ln == 1:
