@@ -3,7 +3,7 @@ import sys
 def main():
     ln = len(sys.argv) - 1
     if ln == 0:
-        print("{} arguments:".fotmat(ln))
+        print("{} arguments.".fotmat(ln))
     elif ln == 1:
         print("{} argument:".format(ln))
     else:
