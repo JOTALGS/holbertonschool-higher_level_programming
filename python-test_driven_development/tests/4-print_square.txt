@@ -1,38 +1,35 @@
 #-----------------------------------------------------
->>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> print_square = __import__('4-print_square').print_square
 
 
 #-----------------------------------------------------
 # Test - 1:
->>> say_my_name("John", "Smith")
-My name is John Smith
-
-
-#-----------------------------------------------------
-# Test - 2:
->>> say_my_name("Bob")
-My name is Bob 
+>>> print_square(4)
+####
+####
+####
+####
 
 
 #-----------------------------------------------------
 # Test - 3:
->>> say_my_name(12, "monky")
+>>> print_square("H")
 Traceback (most recent call last):
     ...
-TypeError: first_name must be a string
+TypeError: size must be an integer
 
 
 #-----------------------------------------------------
 # Test - 4:
->>> say_my_name("monky", 12)
+>>> print_square(-15)
 Traceback (most recent call last):
     ...
-TypeError: last_name must be a string
+ValueError: size must be >= 0
 
 
 #-----------------------------------------------------
 # Test - 5:
->>> say_my_name()
+>>> print_square(5.65)
 Traceback (most recent call last):
     ...
-TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+TypeError: size must be an integer
