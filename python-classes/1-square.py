@@ -3,5 +3,6 @@
 
 
 class Square:
-    """Empty Class"""
-    pass
+    """Not Empty Class"""
+    def __init__(self, size):
+        self.__size = size
