@@ -4,7 +4,7 @@
 
 #-----------------------------------------------------
 # Test - 1:
->>> text_indentation("""Lorem elit. Quonam modo?""")
+>>> text_indentation("""Lorem elit.    Quonam modo?  """)
 Lorem elit.
 <BLANKLINE>
 Quonam modo?
@@ -12,7 +12,17 @@ Quonam modo?
 
 
 #-----------------------------------------------------
-# Test - 2:
+# Test - 1:
+>>> text_indentation("""Lorem elit: Quonam modo?""")
+Lorem elit:
+<BLANKLINE>
+Quonam modo?
+<BLANKLINE>
+
+
+
+#-----------------------------------------------------
+# Test - 3:
 >>> text_indentation(25)
 Traceback (most recent call last):
     ...
