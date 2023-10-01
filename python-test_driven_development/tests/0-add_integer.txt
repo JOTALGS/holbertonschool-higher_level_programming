@@ -1,0 +1,64 @@
+#-----------------------------------------------------
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+#-----------------------------------------------------
+# Test - 1:
+>>> add_integer(2, 2)
+4
+
+
+#-----------------------------------------------------
+# Test - 2:
+>>> add_integer(2, -2)
+0
+
+
+#-----------------------------------------------------
+# Test - 3:
+>>> add_integer(2)
+100
+
+
+#-----------------------------------------------------
+# Test - 4:
+>>> add_integer(2.45, 4.21)
+6
+
+
+#-----------------------------------------------------
+# Test - 5:
+>>> add_integer(2, "hola")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+
+#-----------------------------------------------------
+# Test - 6:
+>>> add_integer([1, 2], 1)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+
+#-----------------------------------------------------
+# Test - 7:
+>>> add_integer(1, float('inf'))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+
+
+#-----------------------------------------------------
+# Test - 8:
+>>> add_integer(1, float('NaN'))
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
+
+
+#-----------------------------------------------------
+# Test - 9:
+>>> add_integer(3e10, 15)
+30000000015
