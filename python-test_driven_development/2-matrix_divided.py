@@ -6,7 +6,7 @@ def matrix_divided(matrix, div):
     for lst in matrix:
         for num in lst:
             if not (isinstance(num, int) or isinstance(num, float)):
-                raise TypeError(m)
+                raise TypeError(msg)
     row_size = len(matrix[0])
     if any(len(row) != row_size for row in matrix):
         raise TypeError("Each row of the matrix must have the same size")
