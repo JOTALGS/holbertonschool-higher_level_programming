@@ -30,7 +30,8 @@ class Rectangle:
         return stri
 
     def __repr__(self):
-        return(f"Rectangle({self.__width}, {self.__width})")
+        return f"Rectangle({self.__width}, {self.__width})"
+
     @property
     def width(self):
         return self.__width
