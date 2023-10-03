@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"Rect"
+"""Rect"""
 
 
 class Rectangle:
-    "Tangle"
+    """Tangle"""
 
     def __init__(self, width=0, height=0):
         if not isinstance(width, int):
