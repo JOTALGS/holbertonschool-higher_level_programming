@@ -12,7 +12,7 @@ Exception: area() is not implemented
 
 #-----------------------------------------------------
 # Test - 2:
->>> BaseGeometry().integer_validator("name", "John")
+>>> BaseGeometry().integer_validator("name", True)
 Traceback (most recent call last):
     ...
 TypeError: name must be an integer
