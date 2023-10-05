@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    "This"
+    """This"""
     def area(self):
         """sdass"""
         raise Exception("area() is not implemented")
