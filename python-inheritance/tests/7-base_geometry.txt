@@ -43,12 +43,14 @@ TypeError: BaseGeometry.integer_validator() missing 1 required positional argume
 
 
 #-----------------------------------------------------
+# Test - 6:
 >>> BaseGeometry().integer_validator("age", (4,))
 Traceback (most recent call last):
 TypeError: age must be an integer
 
 
 #-----------------------------------------------------
+# Test - 7:
 >>> BaseGeometry().integer_validator("age", None)
 Traceback (most recent call last):
     ...
