@@ -4,5 +4,5 @@
 
 def read_file(filename=""):
     """dsdsd"""
-    with open("r", filename) as txt:
+    with open(filename, "r") as txt:
         print(txt.read(), end="")
