@@ -2,7 +2,7 @@
 """Base geo"""
 
 
-class BaseGeometry:
+class BaseGeometry():
     """This"""
     def area(self):
         """sdass"""
