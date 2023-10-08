@@ -1,15 +1,18 @@
 #!/usr/bin/python3
-"""Base geo"""
+"""
+    Class Base Geo
+"""
 
 
 class BaseGeometry():
-    """This"""
+    """ Base """
+
     def area(self):
-        """sdass"""
+        """ exeption """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """sdadfgg"""
+        """ value """
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
