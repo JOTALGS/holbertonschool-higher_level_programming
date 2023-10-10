@@ -31,7 +31,7 @@ class Rectangle(Base):
         self.w_valid(width)
         self.h_valid(height)
         self.x_valid(x)
-        self.y_valid(y)      
+        self.y_valid(y)
         super().__init__(id)
         self.width = width
         self.height = height
@@ -39,7 +39,9 @@ class Rectangle(Base):
         self.y = y
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        s = f"[Rectangle] ({self.id}) {self.__x}"
+        t = f"/{self.__y} - {self.__width}/{self.__height}"
+        return s + t
 
     @property
     def width(self):
