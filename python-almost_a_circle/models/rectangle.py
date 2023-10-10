@@ -1,14 +1,28 @@
 #!/usr/bin/python3
-"""eerer"""
+"""
+    Class Base.
+"""
+
 
 from base import Base
 
 
 class Rectangle(Base):
-    """sdsdsd"""
+    """
+        Class Base.
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ini"""
+        """
+            Initializes a new instance of the Base class.
+
+            Args:
+                width:  (int) The width of rectangle.
+                height: (int) The height of the rectangle.
+                x:      (int, optional) The x coordinate.
+                y:      (int, optional) The x coordinate.
+                id:     (int, optional) The ID value.
+        """
         self.w_valid(width)
         self.h_valid(height)
         self.x_valid(x)
