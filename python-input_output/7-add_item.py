@@ -19,6 +19,4 @@ def main():
             ls.append(sys.argv[i])
         save_to_json_file(ls, filn)
 
-
-if __name__ == "__main__":
-    main()
+main()
