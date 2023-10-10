@@ -95,18 +95,12 @@ class Rectangle(Base):
         """Return rectangle area."""
         for _ in range(self.__y):
             print()
-        stri = ""
-        if self.__width == 0 or self.__height == 0:
-            print(stri)
-        else:
-            for i in range(self.__height):
-                for _ in range(1, self.__x):
-                    stri += " "
-                for _ in range(self.__width):
-                    stri += "#"
-                if i != self.__height - 1:
-                    stri += "\n"
-            print(stri)
+        for i in range(self.__height):
+            for _ in range(1, self.__x):
+                print(" ", end="")
+            for _ in range(self.__width):
+                print("#", end="")
+            print()
 
     @staticmethod
     def w_valid(arg):
