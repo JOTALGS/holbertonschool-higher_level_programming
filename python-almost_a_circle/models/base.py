@@ -1,14 +1,31 @@
 #!/usr/bin/python3
-"""dsda"""
+"""
+Module for project Base class.
+The “base” class to manage id attribute across subclasses
+and to avoid duplicating the same code.
+"""
 
 
-class Base():
-    """sdsdasd"""
+class Base:
+    """
+    Representation of Base class.
+
+    Attrs:
+        id: An ID for instances.
+
+    Class attrs:
+        __nb_objects: Keeps count of the number of instances created.
+    """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """dfdf"""
+        """
+        Initialises Base class obj with an ID.
+
+        Args:
+            id (int, optional): An ID for the instance.
+        """
         if id is not None:
             self.id = id
         else:
