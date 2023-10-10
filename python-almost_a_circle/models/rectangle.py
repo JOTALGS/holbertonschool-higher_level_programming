@@ -43,10 +43,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """w getter"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """w setter"""
         self.w_valid(value)
         self.__width = value
 
@@ -57,31 +59,38 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """h setter"""
         self.h_valid(value)
         self.__height = value
 
     @property
     def x(self):
+        """x getter"""
         return self.__x
 
     @x.setter
     def x(self, x):
+        """x setter"""
         self.x_valid(x)
         self.__x = x
 
     @property
     def y(self):
+        """y getter"""
         return self.__y
 
     @y.setter
     def y(self, y):
+        """y setter"""
         self.y_valid(y)
         self.__y = y
 
     def area(self):
+        """Return rectangle area."""
         return self.__width * self.__height
 
     def display(self):
+        """Return rectangle area."""
         for _ in range(self.__y):
             print()
         stri = ""
@@ -99,6 +108,7 @@ class Rectangle(Base):
 
     @staticmethod
     def w_valid(arg):
+        """Return rectangle area."""
         if not isinstance(arg, int):
             raise TypeError("width must be an integer")
         if arg <= 0:
@@ -106,6 +116,7 @@ class Rectangle(Base):
 
     @staticmethod
     def h_valid(arg):
+        """Return rectangle area."""
         if not isinstance(arg, int):
             raise TypeError("height must be an integer")
         if arg <= 0:
@@ -113,6 +124,7 @@ class Rectangle(Base):
 
     @staticmethod
     def x_valid(arg):
+        """Return rectangle area."""
         if not isinstance(arg, int):
             raise TypeError("x must be an integer")
         if arg < 0:
@@ -120,6 +132,7 @@ class Rectangle(Base):
 
     @staticmethod
     def y_valid(arg):
+        """Return rectangle area."""
         if not isinstance(arg, int):
             raise TypeError("y must be an integer")
         if arg < 0:
