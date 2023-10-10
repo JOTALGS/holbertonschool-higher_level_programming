@@ -11,7 +11,7 @@ def main():
     """jgvjhfhgd"""
     filn = "add_item.json"
     with open(filn, "w", encoding="UTF8") as jfil:
-        if os.path.exists(filn):
+        if not os.path.exists(filn):
             ls = []
         else:
             ls = load_from_json_file(filn)
