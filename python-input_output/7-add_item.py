@@ -7,8 +7,9 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
-filn = "add_item.json"
-with open(filn, "w", encoding="UTF8") as jfil:
+def main():
+    """jgvjhfhgd"""
+    filn = "add_item.json"
     if not os.path.exists(filn):
         ls = []
     else:
@@ -16,3 +17,7 @@ with open(filn, "w", encoding="UTF8") as jfil:
     for i in range(1, len(sys.argv)):
         ls.append(sys.argv[i])
     save_to_json_file(ls, filn)
+
+
+if __name__ == "__main__":
+    main()
