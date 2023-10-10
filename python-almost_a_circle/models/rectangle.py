@@ -8,29 +8,35 @@ from models.base import Base
 
 class Rectangle(Base):
     """
-        Class Base.
+    Rectangle class inherits from Base.
+
+    Attrs:
+        width (int)
+        height (int)
+        x (int)
+        y (int)
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-            Initializes a new instance of the Base class.
+        Constructor method for Rectangle class.
 
-            Args:
-                width:  (int) The width of rectangle.
-                height: (int) The height of the rectangle.
-                x:      (int, optional) The x coordinate.
-                y:      (int, optional) The x coordinate.
-                id:     (int, optional) The ID value.
+        Args:
+            width (int)
+            height (int)
+            x (int)
+            y (int)
+            id (int)
         """
         self.w_valid(width)
         self.h_valid(height)
         self.x_valid(x)
         self.y_valid(y)      
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     def __str__(self):
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
