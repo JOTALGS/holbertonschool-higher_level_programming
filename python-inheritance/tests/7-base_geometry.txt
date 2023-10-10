@@ -1,55 +1,107 @@
-#-----------------------------------------------------
+=======================================================================================
+Tests to test integer_validator function from class BaseGeometry (7-base_geometry)
+=======================================================================================
+
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+>>> bg = BaseGeometry()
 
-#-----------------------------------------------------
-# Test - 1:
->>> BaseGeometry().area()
+
+Test - 1:
+>>> bg.integer_validator("Pep", 0)
 Traceback (most recent call last):
-    ...
+ValueError: Pep must be greater than 0
+
+Test - 2:
+>>> bg.integer_validator("Pep", -12)
+Traceback (most recent call last):
+ValueError: Pep must be greater than 0
+
+
+Test - 3:
+>>> bg.integer_validator("Pep")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+Test - 4:
+>>> bg.integer_validator("Pep", "2")
+Traceback (most recent call last):
+TypeError: Pep must be an integer
+
+
+Test - 5:
+>>> bg.integer_validator("Pep", (2,))
+Traceback (most recent call last):
+TypeError: Pep must be an integer
+
+
+Test - 6:
+>>> bg.integer_validator("Pep", [2, 1])
+Traceback (most recent call last):
+TypeError: Pep must be an integer
+
+
+Test - 7:
+>>> bg.integer_validator("Pep", [])
+Traceback (most recent call last):
+TypeError: Pep must be an integer
+
+
+Test - 8:
+>>> bg.integer_validator("Pep", {"key": 34, "Hello": 98})
+Traceback (most recent call last):
+TypeError: Pep must be an integer
+
+
+Test - 10:
+>>> bg.integer_validator("Pep", 2.953)
+Traceback (most recent call last):
+TypeError: Pep must be an integer
+
+
+Test - 11:
+>>> bg.integer_validator("Pep", -2.953)
+Traceback (most recent call last):
+TypeError: Pep must be an integer
+
+
+Test - 12:
+>>> bg.integer_validator("Pep", None)
+Traceback (most recent call last):
+TypeError: Pep must be an integer
+
+
+Test - 14:
+>>> bg.integer_validator("Pep", True)
+Traceback (most recent call last):
+TypeError: Pep must be an integer
+
+Test - 15:
+>>> bg.integer_validator("Pep", False)
+Traceback (most recent call last):
+TypeError: Pep must be an integer
+
+
+Test - 16:
+>>> bg.area()
+Traceback (most recent call last):
 Exception: area() is not implemented
 
 
-#-----------------------------------------------------
-# Test - 2:
->>> BaseGeometry().integer_validator("name", True)
+Test - 17:
+>>> bg.integer_validator("Pep", float("NaN"))
 Traceback (most recent call last):
-    ...
-TypeError: name must be an integer
+TypeError: Pep must be an integer
 
 
-#-----------------------------------------------------
-# Test - 3:
->>> BaseGeometry().integer_validator("age", 0)
+Test - 18:
+>>> bg.integer_validator("Pep", float("inf"))
 Traceback (most recent call last):
-    ...
-ValueError: age must be greater than 0
+TypeError: Pep must be an integer
 
 
-#-----------------------------------------------------
-# Test - 4:
->>> BaseGeometry().integer_validator("distance", -4)
+Test - 19:
+>>> bg.integer_validator("Pep", {"h", "e", "l", "l", "o"})
 Traceback (most recent call last):
-    ...
-ValueError: distance must be greater than 0
-
-
-#-----------------------------------------------------
-# Test - 5:
->>> BaseGeometry().integer_validator("age")
-Traceback (most recent call last):
-    ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
-
-#-----------------------------------------------------
->>> BaseGeometry().integer_validator("age", (4,))
-Traceback (most recent call last):
-TypeError: age must be an integer
-
-
-#-----------------------------------------------------
->>> BaseGeometry().integer_validator("age", None)
-Traceback (most recent call last):
-    ...
-TypeError: age must be an integer
+TypeError: Pep must be an integer
