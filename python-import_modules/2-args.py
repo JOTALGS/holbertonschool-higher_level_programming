@@ -3,6 +3,7 @@ import sys
 
 
 def main():
+    """sdas"""
     ln = len(sys.argv) - 1
     if ln == 0:
         print("{} arguments.".fotmat(ln))
