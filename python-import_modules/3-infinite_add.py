@@ -6,7 +6,7 @@ def main():
     """hhh"""
     argc = len(sys.argv)
     res = 0
-    for i in range(argc):
+    for i in range(1, argc):
         add += int(sys.argv(i))
     print("{}".format(res))
 
