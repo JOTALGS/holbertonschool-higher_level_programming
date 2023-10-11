@@ -5,7 +5,9 @@
 class Rectangle:
     """Tangle"""
 
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
+        type(self).number_of_instances += 1
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -33,6 +35,7 @@ class Rectangle:
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
+        type(self).number_of_instances -= 1
         print("Bye rectangle...")
 
     @property
