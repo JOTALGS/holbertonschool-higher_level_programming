@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import hidden_4
 
 
 def main():
@@ -11,4 +10,5 @@ def main():
 
 
 if __name__ == "__main__":
+    import hidden_4
     main()
