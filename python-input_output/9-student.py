@@ -9,6 +9,6 @@ class Student():
         self.last_name = last_name
         self.age = age
 
-    def class_to_json(self, obj):
+    def to_json(self):
         """fdfd"""
-        return obj.__dict__
+        return self.__dict__
