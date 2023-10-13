@@ -131,13 +131,13 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """dds"""
-        dic = self.__dict__
-        new_dic = {}
-        for key, value in dic.items():
-            if key == 'id':
-                new_dic[key] = value
-            else:
-                new_dic[key[12:]] = value
+        new_dic = {
+            "id": self.id,
+            "width": self.__width,
+            "height": self.__height,
+            "x": self.__x,
+            "y": self.__y,
+        }
         return new_dic
 
     @staticmethod
