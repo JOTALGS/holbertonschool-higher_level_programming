@@ -130,13 +130,13 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """dds"""
-        new_dic ={}
+        new_dic = {}
         new_dic["x"] = self.__dict__['_Rectangle__x']
         new_dic["y"] = self.__dict__['_Rectangle__y']
         new_dic["id"] = self.__dict__['id']
         new_dic["height"] = self.__dict__['_Rectangle__height']
         new_dic["width"] = self.__dict__['_Rectangle__width']
-        return new_dic 
+        return new_dic
 
     @staticmethod
     def w_valid(arg):
