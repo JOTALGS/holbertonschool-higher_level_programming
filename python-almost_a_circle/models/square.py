@@ -2,7 +2,6 @@
 """
     Class Base.
 """
-
 from models.rectangle import Rectangle
 
 
@@ -28,7 +27,7 @@ class Square(Rectangle):
         self.height = val
 
     def update(self, *args, **kwargs):
-        """ddsds"""
+        """ddsga  dgffghfhhhmbvbs"""
         if not args:
             for key, value in kwargs.items():
                 if key == "id":
@@ -39,7 +38,6 @@ class Square(Rectangle):
                     self.x = value
                 if key == "y":
                     self.y = value
-
         if len(args) > 0:
             self.id = args[0]
         if len(args) > 1:
@@ -50,7 +48,7 @@ class Square(Rectangle):
             self.y = args[3]
 
     def to_dictionary(self):
-        """dds"""
+        """ sdbhhjverjhvre lbmhba """
         dic = self.__dict__
         new_dic = {}
         for key, value in dic.items():
