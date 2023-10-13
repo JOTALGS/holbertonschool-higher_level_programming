@@ -3,7 +3,7 @@
     Class Base.
 """
 
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -130,12 +130,13 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """dds"""
+        dic = self.__dict__
         new_dic = {}
-        new_dic["x"] = self.__dict__['_Rectangle__x']
-        new_dic["y"] = self.__dict__['_Rectangle__y']
-        new_dic["id"] = self.__dict__['id']
-        new_dic["height"] = self.__dict__['_Rectangle__height']
-        new_dic["width"] = self.__dict__['_Rectangle__width']
+        for key, value in dic.items():
+            if key == 'id':
+                new_dic[key] = value
+            else:
+                new_dic[key[12:]] = value
         return new_dic
 
     @staticmethod
