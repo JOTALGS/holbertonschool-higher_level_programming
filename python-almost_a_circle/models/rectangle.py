@@ -3,7 +3,7 @@
     Class Base.
 """
 
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -95,12 +95,25 @@ class Rectangle(Base):
         """Return rectangle area."""
         for _ in range(self.__y):
             print()
-        for i in range(self.__height):
+        for _ in range(self.__height):
             for _ in range(1, self.__x):
                 print(" ", end="")
             for _ in range(self.__width):
                 print("#", end="")
             print()
+
+    def update(self, *args):
+        """dsdsd"""
+        if len(args) > 0:
+            self.id = args[0]
+        if len(args) > 1:
+            self.__width = args[1]
+        if len(args) > 2:
+            self.__height = args[2]
+        if len(args) > 3:
+            self.__x = args[3]
+        if len(args) > 4:
+            self.__y = args[4]
 
     @staticmethod
     def w_valid(arg):
