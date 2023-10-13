@@ -28,7 +28,7 @@ class Square(Rectangle):
         self.height = val
 
 
-    def update(self, *args, *kwargs)
+    def update(self, *args, **kwargs):
         """ddsds"""
         if not args:
             for key, value in kwargs.items():
