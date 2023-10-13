@@ -31,9 +31,17 @@ class Base():
             filename = "Rectangle.json"
         else:
             filename = "Square.json"
-        with open(filename, 'w', encoding="UTF8") as file:
+        with open(filename, 'w', encoding='UTF8') as file:
             if list_objs is None:
                 file.write(json.dumps([]))
             for obj in list_objs:
                 file.write(json.dumps(obj.__dict__))
             file.close()
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """ddsfvhjfvjh sdsad"""
+        if list_dictionaries is not None:
+            return json.dumps(list_dictionaries)
+        else:
+            return "[]"
