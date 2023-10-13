@@ -39,6 +39,7 @@ class Rectangle(Base):
         self.y = y
 
     def __str__(self):
+        """se"""
         s = f"[Rectangle] ({self.id}) {self.__x}"
         t = f"/{self.__y} - {self.__width}/{self.__height}"
         return s + t
