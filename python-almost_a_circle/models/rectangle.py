@@ -3,7 +3,7 @@
     Class Base.
 """
 
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -102,8 +102,21 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
-        """dsdsd"""
+    def update(self, *args, **kwargs):
+        """ddsds"""
+        if not args:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.__width = value
+                if key == "width":
+                    self.__height = value
+                if key == "x":
+                    self.__x = value
+                if key == "y":
+                    self.__y = value
+
         if len(args) > 0:
             self.id = args[0]
         if len(args) > 1:
@@ -114,6 +127,16 @@ class Rectangle(Base):
             self.__x = args[3]
         if len(args) > 4:
             self.__y = args[4]
+
+    def to_dictionary(self):
+        """dds"""
+        new_dic ={}
+        new_dic["x"] = self.__dict__['_Rectangle__x']
+        new_dic["y"] = self.__dict__['_Rectangle__y']
+        new_dic["id"] = self.__dict__['id']
+        new_dic["height"] = self.__dict__['_Rectangle__height']
+        new_dic["width"] = self.__dict__['_Rectangle__width']
+        return new_dic 
 
     @staticmethod
     def w_valid(arg):
