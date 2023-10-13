@@ -22,4 +22,6 @@ class Student():
 
     def reload_from_json(self, json):
         """ssd"""
-        self.__dict__ = json
+        for i in json:
+            for i in self.__dict__:
+                self.__dict__[i] = json[i]
