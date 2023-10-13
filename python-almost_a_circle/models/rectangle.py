@@ -2,7 +2,6 @@
 """
     Class Base.
 """
-
 from models.base import Base
 
 
@@ -117,7 +116,6 @@ class Rectangle(Base):
                     self.__x = value
                 if key == "y":
                     self.__y = value
-
         if len(args) > 0:
             self.id = args[0]
         if len(args) > 1:
