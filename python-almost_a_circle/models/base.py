@@ -31,11 +31,13 @@ class Base():
             filename = "Rectangle.json"
         else:
             filename = "Square.json"
+        lst = []
         with open(filename, 'w', encoding='UTF8') as file:
             if list_objs is None:
-                file.write(json.dumps([]))
+                file.write(json.dumps(lst))
             for obj in list_objs:
-                file.write(json.dumps(obj.__dict__))
+                lst.append(obj.__dict__)
+                file.write(json.dumps(lst))
             file.close()
 
     @staticmethod
