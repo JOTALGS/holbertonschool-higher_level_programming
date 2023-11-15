@@ -1,2 +1,2 @@
---Comentarios pana comentarios
+-- Comentarios pana comentarios.
 SHOW DATABASES;
