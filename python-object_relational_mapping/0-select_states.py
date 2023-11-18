@@ -13,10 +13,8 @@ def main():
     cur = db.cursor()
     cur.execute('SELECT * FROM states ORDER BY id ASC')
     rows = cur.fetchall()
-    # Print the results
     for row in rows:
         print(row)
-    # Close the connection
     db.close()
 
 if __name__ == "__main__":
