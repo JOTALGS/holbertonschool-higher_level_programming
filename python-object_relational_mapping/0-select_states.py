@@ -17,10 +17,10 @@ def main():
         db=db_name
         )
     cur = db.cursor()
-    cur.execute('SELECT * FROM states ORDER BY id ASC')
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    cur.execute('SELECT * FROM states ORDER BY id')
+    states = cur.fetchall()
+    for state in states:
+        print(state)
     db.close()
 
 
