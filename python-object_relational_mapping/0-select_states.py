@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """dsdsdd sds ds dsd """
-
-
-def main():
+if __name__ == "__main__":
     """,ain fun ca"""
     import MySQLdb
     import sys
@@ -22,7 +20,3 @@ def main():
     for state in states:
         print(state)
     db.close()
-
-
-if __name__ == "__main__":
-    main()
