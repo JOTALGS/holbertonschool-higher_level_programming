@@ -11,7 +11,7 @@ def main():
     db_name = sys.argv[3]
     db = MySQLdb.connect(host='localhost', user=user_name, passwd=user_passw, db=db_name)
     cur = db.cursor()
-    cur.execute('SELECT * FROM states ORDER BY id')
+    cur.execute('SELECT * FROM states ORDER BY id ASC')
     rows = cur.fetchall()
     # Print the results
     for row in rows:
