@@ -12,4 +12,4 @@ if __name__ == "__main__":
         __tablename__ = 'states'
         id = Column(Integer, autoincrement='auto',
                     unique=True, primary_key=True)
-        name = Column(String(128))
+        name = Column(String(128), nullable=False)
