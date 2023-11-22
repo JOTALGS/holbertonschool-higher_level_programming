@@ -21,6 +21,6 @@ if __name__ == "__main__":
     cur.execute(qry)
     states = cur.fetchall()
     for state in states:
-        if state[1][0] == 'N':
-            print(state)
+        print(state)
+
     db.close()
