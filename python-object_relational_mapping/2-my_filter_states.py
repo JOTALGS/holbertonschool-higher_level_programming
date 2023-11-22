@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """dsdsdd sds ds dsd """
+
 if __name__ == "__main__":
     """,ain fun ca"""
     import MySQLdb
@@ -17,7 +18,7 @@ if __name__ == "__main__":
         )
     cur = db.cursor()
     qry = "SELECT * FROM states WHERE \
-        name LIKE {} ORDER BY id ASC".format(state_name)
+        name LIKE '{}' ORDER BY id ASC".format(state_name)
     cur.execute(qry)
     states = cur.fetchall()
     for state in states:
