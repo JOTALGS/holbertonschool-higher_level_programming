@@ -8,6 +8,7 @@ if __name__ == "__main__":
     Base = declarative_base()
 
     class State(Base):
+        """comne asdsds docu nadns ansdnsndjdd js dj"""
         __tablename__ = 'states'
         id = Column(Integer, autoincrement='auto',
                     unique=True, primary_key=True)
