@@ -15,7 +15,8 @@ if __name__ == "__main__":
         db=db_name
         )
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE '%N%' ORDER BY states.id ASC")
+    qry = "SELECT * FROM states WHERE name LIKE '%N%' ORDER BY states.id ASC"
+    cur.execute(qry)
     states = cur.fetchall()
     for state in states:
         if state[1][0] == 'N':
