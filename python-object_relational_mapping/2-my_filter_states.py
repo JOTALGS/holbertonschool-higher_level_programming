@@ -17,7 +17,7 @@ if __name__ == "__main__":
         )
     cur = db.cursor()
     qry = "SELECT * FROM states WHERE \
-        name LIKE {state_name} ORDER BY id ASC"
+        name LIKE {} ORDER BY id ASC".format(state_name)
     cur.execute(qry)
     states = cur.fetchall()
     for state in states:
