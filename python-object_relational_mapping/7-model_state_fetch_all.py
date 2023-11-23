@@ -1,27 +1,25 @@
 #!/usr/bin/python3
-"""dsdsdd sds ds dsd """
+"""
+    sadarfeafewfwet  v gr gefg f afdsf sdg feaa dsf sdf
+"""
 
-
+import sys
+from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State
-import sys
 
-if __name__ == '__main__':
-    ny_usrn = sys.argv[1]
-    my_passw = sys.argv[2]
-    my_db = sys.argv[3]
-    engstr = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-        my_usrn,
-        my_passw,
-        my_db
-    )
-    engine = create_engine(engstr)
 
-    Session = sessionmaker(bind=engine)
+if __name_ == '__main__':
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+        sys.argv[1],
+        sys.atgv[2],
+        sys.argv[3]
+    ))
+
+    sess = sessionmaker(bind=engine)
+    Session = sess()
     session = Session()
-    states = session.query(State).order_by(State.id).all()
+    result = session.query(State).order_by(State.id)
 
-    for state in states:
-        print(state)
-    session.close()
+    for resu in result:
+        print(resu)
