@@ -11,7 +11,7 @@ if __name__ == '__main__':
     ny_usrn = sys.argv[1]
     my_passw = sys.argv[2]
     my_db = sys.argv[3]
-    engstr = f'sqlite:///{my_usrn}:{my_passw}@localhost:3306/{my_db}'
+    engstr = f'mysql+mysqldb:///{my_usrn}:{my_passw}@localhost:3306/{my_db}'
     engine = create_engine(engstr)
     Base = declarative_base()
 
