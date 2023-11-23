@@ -11,15 +11,14 @@ if __name__ == '__main__':
     ny_usrn = sys.argv[1]
     my_passw = sys.argv[2]
     my_db = sys.argv[3]
-    engstr = 'mysql+mysqldb:///{}:{}@localhost:3306/{}'.format(
+    engstr = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         my_usrn,
         my_passw,
         my_db
     )
     engine = create_engine(engstr)
 
-    s = sessionmaker(bind=engine)
-    Session = s()
+    Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).order_by(State.id)
 
