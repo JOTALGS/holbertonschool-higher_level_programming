@@ -3,7 +3,6 @@
 
 if __name__ == '__main__':
     from sqlalchemy import create_engine
-    from sqlalchemy.ext.declarative import declarative_base
     from sqlalchemy.orm import sessionmaker
     from model_state import Base, State
     import sys
@@ -13,9 +12,6 @@ if __name__ == '__main__':
     my_db = sys.argv[3]
     engstr = f'mysql+mysqldb:///{my_usrn}:{my_passw}@localhost:3306/{my_db}'
     engine = create_engine(engstr)
-    Base = declarative_base()
-
-    Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
