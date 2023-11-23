@@ -12,7 +12,7 @@ from sqlalchemy.orm import sessionmaker
 if __name_ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         sys.argv[1],
-        sys.atgv[2],
+        sys.argv[2],
         sys.argv[3]
     ))
 
