@@ -2,12 +2,12 @@
 """dsdsdd sds ds dsd """
 
 
-if __name__ == '__main__':
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
     from model_state import Base, State
     import sys
 
+if __name__ == '__main__':
     ny_usrn = sys.argv[1]
     my_passw = sys.argv[2]
     my_db = sys.argv[3]
