@@ -11,9 +11,9 @@ if __name__ == '__main__':
     my_passw = sys.argv[2]
     my_db = sys.argv[3]
     engstr = 'mysql+mysqldb:///{}:{}@localhost:3306/{}'.format(
-    my_usrn,
-    my_passw,
-    my_db
+        my_usrn,
+        my_passw,
+        my_db
     )
     engine = create_engine(engstr)
 
