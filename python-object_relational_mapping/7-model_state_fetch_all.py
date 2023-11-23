@@ -18,7 +18,8 @@ if __name__ == '__main__':
     )
     engine = create_engine(engstr)
 
-    Session = sessionmaker(bind=engine)
+    s = sessionmaker(bind=engine)
+    Session = s()
     session = Session()
     states = session.query(State).order_by(State.id)
 
